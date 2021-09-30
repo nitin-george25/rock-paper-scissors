@@ -1,0 +1,19 @@
+@import './reset';
+@import './variables';
+body {
+    background-color: $primary-color-700;
+    font-family: $font-main;
+    color: $primary-color-400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 1rem;
+    padding: .5rem 2rem;
+    background-color: $primary-color-300;
+    border: none;
+    border-radius: 5px;
+}
