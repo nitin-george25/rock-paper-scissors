@@ -33,6 +33,7 @@ First one to win 3 rounds wins.
 - HTML
 - CSS
 - JavaScript
+- Mobile-First Design Approach
 
 # Acknowledgement
 
