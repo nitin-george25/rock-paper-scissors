@@ -1,0 +1,33 @@
+@mixin border {
+    border: solid 2px $color-blck;
+    border-radius: 10px;
+}
+
+@mixin grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin board {
+    flex: 1;
+    width: 90%;
+    background-color: $primary-color-400;
+    @include border;
+    @include flexRow;
+    color: $color-blck;
+}

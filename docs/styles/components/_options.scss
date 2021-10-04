@@ -1,0 +1,42 @@
+.options {
+    @include grid;
+    @include border;
+    flex: 2;
+    width: 85%;
+    grid-template-areas: "title title title" "rock paper scissors" "rock paper scissors";
+    justify-content: space-evenly;
+    margin: .5rem;
+    background-color: $primary-color-300;
+    color: $color-blck;
+    .title {
+        grid-area: title;
+        text-align: center;
+        @media screen and (min-width: 475px) {
+            font-size: 18px;
+        }
+    }
+    .option {
+        @include border;
+        font-size: 25px;
+        text-align: center;
+        @media screen and (min-width: 475px) {
+            font-size: 36px;
+            height: 60px;
+            width: 60px;
+        }
+    }
+    .option:hover {
+        cursor: pointer;
+        background-color: $color-blck;
+        color: $primary-color-300;
+    }
+    .rock {
+        grid-area: rock;
+    }
+    .paper {
+        grid-area: paper;
+    }
+    .scissors {
+        grid-area: scissors;
+    }
+}

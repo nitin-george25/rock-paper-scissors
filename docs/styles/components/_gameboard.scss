@@ -1,0 +1,31 @@
+.gameboard {
+    @include board;
+    font-size: 16px;
+    .screen {
+        @include grid;
+        grid-template-areas: "name" "hand" "hand";
+        .name {
+            grid-area: name;
+            @media screen and (min-width: 475px) {
+                font-size: 24px;
+            }
+        }
+        .hand {
+            grid-area: hand;
+            text-align: center;
+            font-size: 50px;
+            @media screen and (min-width: 475px) {
+                font-size: 72px;
+            }
+        }
+    }
+    .player {
+        flex: 2;
+    }
+    .computer {
+        flex: 2;
+    }
+    @media screen and (min-width: 475px) {
+        height: 65%;
+    }
+}

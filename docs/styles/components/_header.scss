@@ -1,0 +1,22 @@
+header {
+    flex: 1 1 12%;
+    width: 100%;
+    @include flexColumn;
+    background-color: $primary-color-400;
+    color: $color-blck;
+    font-size: 18px;
+    .logo {
+        display: grid;
+        font-size: 18px;
+        grid-template-areas: "... rock ..." "scissors ... paper";
+         :first-child {
+            grid-area: rock;
+        }
+         :nth-child(2) {
+            grid-area: paper;
+        }
+         :last-child {
+            grid-area: scissors;
+        }
+    }
+}

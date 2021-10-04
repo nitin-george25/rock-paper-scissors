@@ -1,0 +1,7 @@
+.countdown {
+    @include board;
+    font-size: 36px;
+    @media screen and (min-width: 475px) {
+        height: 65%;
+    }
+}

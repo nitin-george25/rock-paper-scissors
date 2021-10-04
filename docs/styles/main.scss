@@ -1,19 +1,56 @@
-@import './reset';
-@import './variables';
+@import './base/reset';
+@import './base/variables';
+@import './base/mixins';
+@import './components/header';
+@import './components/play';
+@import './components/scoreboard';
+@import './components/options';
+@import './components/countdown';
+@import './components/gameboard';
+@import './components/gameover';
 body {
-    background-color: $primary-color-700;
+    height: 100vh;
+    width: 100%;
     font-family: $font-main;
-    color: $primary-color-400;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-button {
-    margin: 1rem;
-    padding: .5rem 2rem;
-    background-color: $primary-color-300;
-    border: none;
-    border-radius: 5px;
+.container {
+    background-color: $primary-color-700;
+    color: $primary-color-400;
+    height: 100vh;
+    width: 100vw;
+    @include flexColumn;
+    gap: 1em;
+}
+
+.rules {
+    flex: 1 1 15%;
+    @include flexRow;
+}
+
+.game {
+    flex: 1 1 70%;
+    width: 90%;
+    @include flexColumn;
+}
+
+@media only screen and (min-width: 475px) {
+    .game {
+        @include flexRow;
+        gap: 1em;
+        width: 90%;
+    }
+}
+
+footer {
+    flex: 1 1 5%;
+    width: 100%;
+    @include flexRow;
+    border-top: solid 2px $color-blck;
+    font-size: 12px;
+    color: $color-blck;
+}
+
+.hidden {
+    display: none;
 }

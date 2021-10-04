@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./styles/main.css">
-    <script src="scripts/play.js" defer></script>
-    <script src="https://use.fontawesome.com/f6f5e8d0e6.js"></script>
+    <script type="module" src="./scripts/player.js"></script>
+    <script type="module" src="./scripts/game.js"></script>
+    <script type="module" src="./scripts/play.js"></script>
+    <script type="module" src="./scripts/animations.js"></script>
+    <script type="module" src="./scripts/events.js" defer></script>
+    <script src="https://kit.fontawesome.com/77fa33a1e7.js" crossorigin="anonymous"></script>
 
 
     <title>Rock Paper Scissors!</title>
@@ -16,30 +20,71 @@
 
 <body>
 
-    <header>
-        ROCK, PAPER, SCISSORS!
-    </header>
+    <div class="container">
+        <header>
+            <div class="logo"><i class="far fa-hand-rock"></i></i>
+                <i class="far fa-hand-paper" aria-hidden="true"></i>
+                <i class="far fa-hand-scissors" aria-hidden="true"></i></div>
+            <p class="title">ROCK PAPER SCISSORS</p>
+        </header>
 
-    <span><i class="fa fa-hand-rock-o" aria-hidden="true"></i>
-
-    <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
-
-    <i class="fa fa-hand-paper-o" aria-hidden="true"></i></span>
-
-    <div class="scoreboard">
-        <div class="score">
-            <p class="player">
-
-            </p>
+        <div class="game">
+            <div class="play">
+                <div class="scoreboard">
+                    <div class="score">
+                        <p class="name">
+                            Player
+                        </p>
+                        <p class="points" id="player">
+                            0
+                        </p>
+                    </div>
+                    <div class="score">
+                        <p class="name">
+                            Computer
+                        </p>
+                        <p class="points" id="comp">
+                            0
+                        </p>
+                    </div>
+                </div>
+                <div class="options">
+                    <p class="title"> Choose Your Move </p>
+                    <div class="rock option" data-key="0"><i class="far fa-hand-rock" data-key="0"></i></div>
+                    <div class="paper option" data-key="1"><i class="far fa-hand-paper" data-key="1"></i></div>
+                    <div class="scissors option" data-key="2"><i class="far fa-hand-scissors" data-key="2"></i></div>
+                </div>
+            </div>
+            <div class="gameboard hidden" id="game">
+                <div class="screen player" data-key="player">
+                    <p class="name">
+                        Player
+                    </p>
+                    <p class="hand" id="playerHand">
+                    </p>
+                </div>
+                <div class="screen computer" data-key="computer">
+                    <p class="name">
+                        Computer
+                    </p>
+                    <p class="hand" id="computerHand">
+                    </p>
+                </div>
+            </div>
+            <div class="countdown" id="start">
+            </div>
         </div>
-        <div class="score">
-            <p class="comp">
-
-            </p>
-        </div>
+        <footer>
+            <div> Designed by Nitin George. </div>
+        </footer>
     </div>
 
-    <button onclick="play()">Play</button>
+    <div class="gameover hidden" id="gameover">
+        <div class="alert">
+            <p id="winner"></p>
+            <button id="reset">Restart</button>
+        </div>
+    </div>
 
 </body>
 

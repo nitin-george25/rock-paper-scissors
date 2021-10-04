@@ -1,0 +1,29 @@
+.scoreboard {
+    flex: 1;
+    width: 75%;
+    @include flexRow;
+    background-color: $primary-color-300;
+    @include border;
+    margin-top: .5rem;
+    @media only screen and (min-width: 475px) {
+        height: 5%;
+    }
+}
+
+.score {
+    flex: 1;
+    min-height: 90%;
+    margin: 5px;
+    @include grid;
+    @include border;
+    background-color: $color-blck;
+    grid-template-areas: "name" "points" "points";
+    color: $primary-color-300;
+    .name {
+        grid-area: name;
+    }
+    .points {
+        grid-area: points;
+        text-align: center;
+    }
+}
